@@ -17,7 +17,7 @@ fn position_is_taken(
     segments: Query<&Position, With<SnakeSegment>>
 ) -> bool {
     for seg_pos in segments.iter() {
-        if seg_pos.x == new_pos.x || seg_pos.y == new_pos.y {
+        if seg_pos.x == new_pos.x && seg_pos.y == new_pos.y {
             return true
         }
     }
